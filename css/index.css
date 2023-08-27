@@ -408,6 +408,10 @@ a {
   float: left;
   justify-content: space-between;
 }
+.social-icon-box:hover,
+.social-icon-box:focus {
+  background-color: var(--success);
+}
 .social-icon-circle {
   display: inline-flex;
   width: 40px;
