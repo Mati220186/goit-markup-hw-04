@@ -93,8 +93,11 @@ img {
 }
 /**/
 .solutions {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(../images/people-office.jpg);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/img-name.jpg);
   max-width: 1440px;
   background-repeat: no-repeat;
   background-position: center;
@@ -219,6 +222,7 @@ img {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  transition: var(--animation-transition);
 }
 .adres:hover,
 .adres:focus {
@@ -284,11 +288,11 @@ img {
 }
 .header-container {
   border-bottom: 1px solid var(--acent);
-  box-shadow: 0px 1px 6px 0px #2e2f4214;
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 
-  box-shadow: 0px 1px 1px 0px #2e2f4229;
+  box-shadow: 0px 1px 1px 0px rgba(46, 47, 66, 0.16);
 
-  box-shadow: 0px 2px 1px 0px #2e2f4214;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 ul {
   margin: 0;
@@ -448,6 +452,10 @@ address {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--primary-brand);
   border-radius: 50%;
+}
+.social-icon-link:hover,
+.social-icon-link:focus {
+  background-color: var(--pressed-state);
 }
 .footer-box {
   display: flex;
