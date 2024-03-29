@@ -12,6 +12,7 @@
   --modal-background: #fcfcfc;
   --light-slate: #8e8f99;
   --main-font: Roboto, sans-serif;
+  --animation-transition: 250ms, cubic-brezier (0.4, 0, 0.2, 1);
 }
 body {
   font-family: var(--main-font);
@@ -355,14 +356,24 @@ address {
 }
 .li-section-portfolio {
   width: calc((100% - 48px) / 3);
+}
+
+.li-section-portfolio:hover,
+.li-section-portfolio:focus {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  cursor: pointer;
+  transition: var(--animation-transition);
+}
+.li-section-portfolio:hover .overlay,
+.li-section-portfolio:focus .overlay {
+  transform: translateY(0);
+  transition: 250ms ease-in-out;
 }
 .li-section3-text {
   padding: 32px 16px;
   border: 1px solid var(--acent);
   border-top: none;
-  margin-bottom: 8px;
 }
 .container-footer {
 }
@@ -485,7 +496,8 @@ address {
   transform: translateY(100%);
   background-color: var(--primary-brand);
 }
-.p-text {
+
+.overlay p {
   width: 296px;
   padding-top: 40px;
   padding-left: 32px;
